@@ -9,11 +9,11 @@
   margin-bottom: 20px;
 }
 img {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
 }
 h5 {
-  font-size: 24px;
+  font-size: 44px;
 }
 
 li {
@@ -47,9 +47,13 @@ button {
   width: auto;
   margin-left: 10px;
 }
-h6 {
-  font-size: 12px;
+h6 
+
+#temperature-placeholder {
+    font-size: 44px; 
 }
+
+
 
 .metric {
   font-size: 12px;
