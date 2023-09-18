@@ -9,6 +9,11 @@
   margin-bottom: 20px;
   font-family:'Times New Roman', Times, serif;
 }
+h5 {
+  margin: 0 auto;
+  text-align: center;
+}
+
 img {
   height: 80px;
   width: 80px;
@@ -21,7 +26,6 @@ img {
     position: relative;
     font-size: 16px;
     top: -18px;
-
 }
 li {
   list-style: none;
