@@ -14,6 +14,105 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <script>index.js</script>
+    <body>
+    <div class="container">
+      <div class="today"></div>
+      <div class="search-form">
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="Enter city name"
+              class="form-control"
+              id="search-text-input"
+            />
+          </div> <span>  <button>Search</button> </span> 
+
+         
+        </form>
+      </div>
+      <h3><strong> <span id="city">Pertoria</span></strong></h3>
+
+      <h5>
+        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="todayicon" id="icon" />
+        <span class="units">
+          <span id="temperature-placeholder">12</span> <span class="metric">°C | <a href="#">°F</a></span>
+        </span>
+      </h5>
+
+      <li class="date-time">08 August 2023 12:22</li>
+
+      <strong>
+        <p>
+          <div class="weather-response">
+            <div id="temperature-description"></div>
+            <div id="humidity"></div>
+            <div id="wind-speed"></div>
+          </div>
+        </p>
+      </strong>
+
+      <br />
+
+      <div class="days">
+        <div class="row">
+          <div class="col">
+
+            <strong>Saturday</strong>
+            <br />
+            <img src="src/images/saturdaycloud.png" alt="clou" />
+            <br />
+
+            <h6>
+              <strong><span class="sat">18°</span></strong> | 6°C
+            </h6>
+          </div>
+
+          <div class="col">
+            <strong>Sunday</strong>
+            <br />
+            <img src="src/images/Sundaycloud.png" alt="cloud" />
+            <br />
+            <h6>
+              <strong> <span class="sun">23°</span></strong
+              >| 9°C
+            </h6>
+          </div>
+          <div class="col">
+            <strong>Monday</strong>
+            <br />
+            <img src="src/images/mondaycloud.png" alt="cloud" />
+            <br />
+            <h6>
+              <strong> <span class="mon">26°</span></strong> | 11°C
+            </h6>
+          </div>
+          <div class="col">
+            <strong>Tuesday</strong>
+            <br />
+            <img src="src/images/saturdaycloud.png" alt="cloud" />
+            <br />
+            <h6>
+              <strong> <span class="tue">17°</span> </strong>| 5°C
+            </h6>
+          </div>
+          <div class="col">
+            <strong>Wednesday</strong>
+            <br />
+            <img src="src/images/weather-icon-png-11083.png" alt="cloud" />
+            <br />
+            <h6>
+              <strong>
+                <span class="wed"> 16° </span>
+              </strong>
+              | 4°C
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      src / index.js;
+    </script>
   </body>
 </html>
