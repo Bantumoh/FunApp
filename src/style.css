@@ -1,0 +1,86 @@
+.container {
+  background: none;
+  border: 1px solid lightblue;
+  border-radius: 20px;
+  max-width: 1000px;
+  height: auto;
+  padding: 60px 60px;
+  margin: 30px auto;
+  margin-bottom: 20px;
+}
+img {
+  height: 50px;
+  width: 50px;
+}
+h5 {
+  font-size: 24px;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+  font-size: 15px;
+}
+
+form {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.search-form {
+  display: inline-block;
+  vertical-align: top;
+}
+.form-group {
+  display: inline-block;
+  width: 500px;
+}
+button {
+  display: inline-block;
+
+  padding: 4px;
+  border-style: none;
+  background-color: #3b8cc1;
+  border-radius: 6px;
+  color: white;
+  width: auto;
+  margin-left: 10px;
+}
+h6 {
+  font-size: 12px;
+}
+
+.metric {
+  font-size: 12px;
+  line-height: -20px;
+}
+.days {
+  text-align: center;
+}
+.today {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wed {
+  color: red;
+}
+.sat {
+  color: red;
+}
+.mon {
+  color: red;
+}
+.tue {
+  color: red;
+}
+.sun {
+  color: red;
+}
+
+.weather-response {
+  margin-top: 20px;
+  text-transform: inherit;
+}
