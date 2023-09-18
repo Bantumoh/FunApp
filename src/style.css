@@ -12,10 +12,15 @@ img {
   height: 80px;
   width: 80px;
 }
-h5 {
+#temperature-placeholder {
   font-size: 44px;
 }
+#metric {
+    position: relative;
+    font-size: 16px;
+    top: -18px;
 
+}
 li {
   list-style: none;
   text-align: left;
@@ -47,18 +52,7 @@ button {
   width: auto;
   margin-left: 10px;
 }
-h6 
 
-#temperature-placeholder {
-    font-size: 44px; 
-}
-
-
-
-.metric {
-  font-size: 12px;
-  line-height: -20px;
-}
 .days {
   text-align: center;
 }
