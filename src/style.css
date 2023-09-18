@@ -2,11 +2,12 @@
   background: none;
   border: 1px solid lightblue;
   border-radius: 20px;
-  max-width: 1000px;
+  max-width: 800px;
   height: auto;
-  padding: 60px 60px;
+  padding: 20px 60px;
   margin: 30px auto;
   margin-bottom: 20px;
+  font-family:'Times New Roman', Times, serif;
 }
 img {
   height: 80px;
@@ -44,22 +45,17 @@ form {
 }
 button {
   display: inline-block;
-
-  padding: 4px;
+  padding: 7px;
   border-style: none;
   background-color: #3b8cc1;
   border-radius: 6px;
   color: white;
-  width: auto;
+  width: 100px;
   margin-left: 10px;
+   
 }
 
 .days {
-  text-align: center;
-}
-.today {
-  display: block;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -81,5 +77,6 @@ button {
 
 .weather-response {
   margin-top: 20px;
-  text-transform: inherit;
+  text-transform: capitalize;
+  
 }

@@ -57,8 +57,8 @@ function updateWeatherData(city) {
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 
-    windElement.innerHTML = `Wind speed of ${response.data.wind.speed} m/s`;
-    humidityElement.innerHTML = `Humidity of ${response.data.main.humidity}%`;
+    windElement.innerHTML = `Wind speed: ${response.data.wind.speed} m/s`;
+    humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
     description.innerHTML = response.data.weather[0].description;
   });
 }
