@@ -4,7 +4,7 @@ let today = document.querySelector(".date-time");
 
 let date = now.getDate();
 let hours = now.getHours();
-if (hours < 0) {
+if (hours < 10) {
   hours = `0${hours}`;
 }
 let minutes = now.getMinutes();
@@ -33,7 +33,7 @@ let months = [
 
 let month = months[now.getMonth()];
 
-today.innerHTML = `Last updated: ${day} ${month} ${date} ${year}, ${hours}:${minutes} `;
+today.innerHTML = `Last updated: ${day} ${month} ${date} ${year}, ${hours}:${minutes}`;
 
 let apiKey = "44748b483f94fdf59996aa7a8c3e93ab";
 
@@ -42,11 +42,8 @@ function updateWeatherData(city) {
 
   axios.get(apiUrl).then(function (response) {
     let temperature = Math.round(response.data.main.temp);
-    let temperatureElement = document.querySelector("#temperature");
-    let temperaturePlaceholder = document.querySelector(
-      "#temperature-placeholder"
-    );
-    temperaturePlaceholder.textContent = temperature;
+    let temperatureElement = document.querySelector("#temperature-placeholder");
+    temperatureElement.textContent = temperature;
     let iconElement = document.querySelector("#icon");
 
     let condition = document.querySelector("#condition");
@@ -54,7 +51,7 @@ function updateWeatherData(city) {
     let windElement = document.querySelector("#wind-speed");
     iconElement.setAttribute(
       "src",
-      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
     );
 
     windElement.innerHTML = `Wind speed: ${response.data.wind.speed} m/s`;
@@ -76,24 +73,13 @@ searchForm.addEventListener("submit", search);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  let temperatureCelsius = parseFloat(temperatureElement.innerHTML);
-  let temperatureFahrenheit = (temperatureCelsius * 9) / 5 + 32;
-  temperatureElement.innerHTML = `${Math.round(temperatureFahrenheit)}°F`;
+  let celsiusTemperature = parseFloat(
+    document.querySelector("#temperature-placeholder").textContent
+  );
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature-placeholder");
+  temperatureElement.textContent = Math.round(fahrenheitTemperature);
 }
 
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  let temperatureFahrenheit = parseFloat(temperatureElement.innerHTML);
-  let temperatureCelsius = ((temperatureFahrenheit - 32) * 5) / 9;
-  temperatureElement.innerHTML = `${Math.round(temperatureCelsius)}°C`;
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheitLink");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsiusLink");
-celsiusLink.addEventListener("click", convertToCelsius);
