@@ -3,12 +3,12 @@
   border: 1px solid lightblue;
   border-radius: 20px;
   max-width: 800px;
-  height: auto;
-  padding: 20px 60px;
+  padding: 30px 30px 30px 30px;
   margin: 30px auto;
   margin-bottom: 20px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 h5 {
   margin: 0 auto;
   text-align: center;
@@ -42,10 +42,11 @@ form {
 .search-form {
   display: inline-block;
   vertical-align: top;
+  width: fixed;
 }
 .form-group {
-  position:relative;
-  display:inline-flex;
+  position: relative;
+  display: inline-flex;
   width: 400px;
 }
 button {
@@ -59,8 +60,7 @@ button {
   margin-left: 10px;
 }
 
-.weather-response {
-  margin-top: 20px;
+#condition::first-letter {
   text-transform: capitalize;
 }
 

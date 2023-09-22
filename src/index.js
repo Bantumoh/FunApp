@@ -33,7 +33,7 @@ let months = [
 
 let month = months[now.getMonth()];
 
-today.innerHTML = `${day} ${month} ${date} ${year}, ${hours}:${minutes} `;
+today.innerHTML = `Last updated: ${day} ${month} ${date} ${year}, ${hours}:${minutes} `;
 
 let apiKey = "44748b483f94fdf59996aa7a8c3e93ab";
 
@@ -49,7 +49,7 @@ function updateWeatherData(city) {
     temperaturePlaceholder.textContent = temperature;
     let iconElement = document.querySelector("#icon");
 
-    let description = document.querySelector("#temperature-description");
+    let condition = document.querySelector("#condition");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind-speed");
     iconElement.setAttribute(
@@ -59,7 +59,7 @@ function updateWeatherData(city) {
 
     windElement.innerHTML = `Wind speed: ${response.data.wind.speed} m/s`;
     humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-    description.innerHTML = response.data.weather[0].description;
+    condition.innerHTML = response.data.weather[0].description;
   });
 }
 
