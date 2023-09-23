@@ -81,5 +81,19 @@ function convertToFahrenheit(event) {
   temperatureElement.textContent = Math.round(fahrenheitTemperature);
 }
 
+function convertToCelsius(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = parseFloat(
+    document.querySelector("#temperature-placeholder").textContent
+  );
+  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+  let temperatureElement = document.querySelector("#temperature-placeholder");
+  temperatureElement.textContent = Math.round(celsiusTemperature);
+}
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
