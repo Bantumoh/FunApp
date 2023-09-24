@@ -73,27 +73,37 @@ searchForm.addEventListener("submit", search);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let celsiusTemperature = parseFloat(
-    document.querySelector("#temperature-placeholder").textContent
-  );
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature-placeholder");
-  temperatureElement.textContent = Math.round(fahrenheitTemperature);
+  let currentTemperature = parseFloat(temperatureElement.textContent);
+
+  if (temperatureElement.dataset.unit === "celsius") {
+    let fahrenheitTemperature = (currentTemperature * 9) / 5 + 32;
+    temperatureElement.textContent = Math.round(fahrenheitTemperature);
+    temperatureElement.dataset.unit = "fahrenheit";
+    fahrenheitLink.classList.add("active");
+    celsiusLink.classList.remove("active");
+  }
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
-  let fahrenheitTemperature = parseFloat(
-    document.querySelector("#temperature-placeholder").textContent
-  );
-  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   let temperatureElement = document.querySelector("#temperature-placeholder");
-  temperatureElement.textContent = Math.round(celsiusTemperature);
+  let currentTemperature = parseFloat(temperatureElement.textContent);
+
+  if (temperatureElement.dataset.unit === "fahrenheit") {
+    let celsiusTemperature = ((currentTemperature - 32) * 5) / 9;
+    temperatureElement.textContent = Math.round(celsiusTemperature);
+    temperatureElement.dataset.unit = "celsius";
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+  }
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+document.querySelector("#temperature-placeholder").dataset.unit = "celsius";
+celsiusLink.classList.add("active");
