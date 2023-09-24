@@ -25,7 +25,7 @@ img {
 #celsius-link {
   text-decoration: none;
   color:black;
-  cursor:none;
+  cursor:pointer;
 }
 
 #fahrenheit-link {
