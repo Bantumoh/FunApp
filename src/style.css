@@ -28,6 +28,10 @@ img {
   cursor:none;
 }
 
+#fahrenheit-link {
+ text-decoration: none; 
+}
+
 #metric {
   position: relative;
   font-size: 16px;
