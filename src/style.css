@@ -8,6 +8,9 @@
   margin-bottom: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+p {
+  text-indent: 20%;
+}
 
 h5 {
   margin: 0 auto;
@@ -24,12 +27,12 @@ img {
 }
 #celsius-link {
   text-decoration: none;
-  color:black;
-  cursor:pointer;
+  color: black;
+  cursor: pointer;
 }
 
 #fahrenheit-link {
- text-decoration: none; 
+  text-decoration: none;
 }
 
 #metric {
