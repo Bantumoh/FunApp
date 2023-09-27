@@ -75,24 +75,29 @@ button {
 
 #condition::first-letter {
   text-transform: capitalize;
-}
 
-.days {
-  text-align: center;
 }
-
-.wed {
-  color: red;
+.forecast{
+  opacity: 0.5;
 }
-.sat {
-  color: red;
+.mon{
+  color:red;
 }
-.mon {
-  color: red;
+.tue{
+  color:red;
 }
-.tue {
-  color: red;
+.wed{
+  color:red;
 }
-.sun {
-  color: red;
+.thu{
+   color:red;
+}
+.fri{
+   color:red;
+}
+.sat{
+   color:red;
+}
+.sun{
+   color:red;
 }
