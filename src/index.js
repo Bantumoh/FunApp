@@ -44,8 +44,20 @@ function updateWeatherData(city) {
     let temperature = Math.round(response.data.main.temp);
     let temperatureElement = document.querySelector("#temperature-placeholder");
     temperatureElement.textContent = temperature;
-    let iconElement = document.querySelector("#icon");
 
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+
+    let forecastData = [
+      { day: days[0], icon: "🌤️", high: 15, low: 9 },
+      { day: days[1], icon: "🌦️", high: 18, low: 10 },
+      { day: days[2], icon: "☁️", high: 20, low: 12 },
+      { day: days[3], icon: "⛈️", high: 16, low: 8 },
+      { day: days[4], icon: "🌧️", high: 14, low: 7 },
+    ];
+
+    displayForecast(forecastData);
+
+    let iconElement = document.querySelector("#icon");
     let condition = document.querySelector("#condition");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind-speed");
@@ -107,3 +119,24 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 document.querySelector("#temperature-placeholder").dataset.unit = "celsius";
 celsiusLink.classList.add("active");
+
+function displayForecast(forecastData) {
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur"];
+  let forecastHtml = "";
+
+  forecastData.forEach(function (forecastDay) {
+    forecastHtml += `
+      <div class="col">
+        <div class="weather-forecast-day">
+          <div class="weather-forecast-date">${forecastDay.day}</div>
+          <div class="weather-forecast-icon">${forecastDay.icon}</div>
+          <div class="weather-forecast-temperature">
+            <strong>${forecastDay.high}°</strong> | ${forecastDay.low}°
+          </div>
+        </div>
+      </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
